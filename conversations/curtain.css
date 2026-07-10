@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Ozik Bold";
+    src: url("../assets/fonts/OZIK-Bold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --white: #fcfcfc;
+    --black: #1b1212;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--black);
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.stage {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: var(--white);
+    z-index: 1;
+}
+
+.stage__inner {
+    padding: 5rem 1.5rem 8rem;
+    max-width: 800px;
+    margin: 0 auto;
+    will-change: transform;
+
+    @media screen and (min-width: 600px) {
+        padding: 7rem 3rem 10rem;
+    }
+}
+
+.page-title {
+    font-family: "Ozik Bold", verdana;
+    font-weight: 600;
+    font-size: clamp(2rem, 6.5vw, 4rem);
+    line-height: 1.1;
+    text-align: center;
+    margin: 0 0 3.5rem;
+}
+
+.films {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.film {
+    margin: 0;
+}
+
+.film .video-js {
+    width: 100%;
+    background-color: var(--black);
+}
+
+.film__caption {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+}
+
+.curtain {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    will-change: transform;
+}
+
+.curtain__body {
+    flex: 1 1 auto;
+    background: url("assets/curtain-top.jpg") center top / 100% 100% no-repeat;
+}
+
+.curtain__hem {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .curtain,
+    .stage__inner {
+        will-change: auto;
+    }
+}

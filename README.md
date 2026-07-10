@@ -1,1 +1,4 @@
-# fantana
+"MY LITTLE PORTFOLIO"
+
+A FANTANA JOINT
+by Sonja Farrell since 1984

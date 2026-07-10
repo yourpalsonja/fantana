@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conversations with Creatives</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://vjs.zencdn.net/8.23.3/video-js.css"
+            rel="stylesheet"
+        />
+        <link href="curtain.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="stage">
+            <div class="stage__inner" data-stage-inner>
+                <h1 class="page-title">Conversations with Creatives</h1>
+
+                <div class="films">
+                    <figure class="film">
+                        <video
+                            class="video-js vjs-fluid vjs-16-9"
+                            controls
+                            preload="metadata"
+                            playsinline
+                            poster="assets/conversations-1.png"
+                            width="640"
+                            height="360"
+                        >
+                            <source
+                                src="assets/conversations-ben.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                        <figcaption class="film__caption">
+                            No. 1 – Ben Hulse talks about the power of design
+                            history
+                        </figcaption>
+                    </figure>
+
+                    <figure class="film">
+                        <video
+                            class="video-js vjs-fluid vjs-16-9"
+                            controls
+                            preload="metadata"
+                            playsinline
+                            poster="assets/conversations-2.png"
+                            width="640"
+                            height="360"
+                        >
+                            <source
+                                src="assets/conversations-fenner.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                        <figcaption class="film__caption">
+                            No. 2 – Fenner Rockcliffe talks about the importance
+                            of speaking up
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="curtain" data-curtain aria-hidden="true">
+            <div class="curtain__body"></div>
+            <img class="curtain__hem" src="assets/curtain-bottom.png" alt="" />
+        </div>
+
+        <div class="scroll-track" data-track></div>
+
+        <script src="https://vjs.zencdn.net/8.23.3/video.min.js"></script>
+        <script src="curtain.js"></script>
+    </body>
+</html>
